@@ -1,3 +1,5 @@
+//使用するキーが1つの場合のキー処理
+
 //PORT
 #define KEY1PORT 2            //キーを繋いでいるポート　この例ではDigital2ピン
 
@@ -44,8 +46,6 @@ void key_Long(void) {
 
 void keyCheck(void) {
   keyCheck_(KEY1PORT, KEY_SHORTTIMEFROM1, KEY_SHORTTIMETO1, KEY_LONGTIME1);
-  //キーチェックをする本体を呼び出す
-  //キーがたくさんある場合は、全キー分設定する
 }
 
 void keyCheck_(byte port_, unsigned int shortTimeFrom_, unsigned int shortTimeTo_, unsigned int longTime_) {
